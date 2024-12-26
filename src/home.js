@@ -1,4 +1,6 @@
-function createHome () {
+import restaurantInterior from "./restaurant-interior.jpg";
+
+function createHome() {
         const div = document.createElement("div");
         div.id = "content";
         
@@ -12,7 +14,7 @@ function createHome () {
         
         const main = document.createElement("main");
         const img = document.createElement("img");
-        img.src = "./restaurant-interior.jpg";
+        img.src = restaurantInterior;
         img.alt = "Elegant dining room with warm lighting and rustic decor";
         
         const section1 = document.createElement("section");
@@ -46,4 +48,4 @@ function createHome () {
         return div;
 }
 
-export default createHome;
+export {createHome};
