@@ -15,19 +15,29 @@ function clearContent() {
     }
 }
 
+function setActiveButton(button) {
+    const buttons = document.querySelectorAll('nav button');
+    buttons.forEach(btn => btn.classList.remove('active-tab'));
+    button.classList.add('active-tab');
+}
+
 homeButton.onclick = function() {
     clearContent();
     document.querySelector("body").appendChild(createHome());
+    setActiveButton(homeButton);
 }
 
 menuButton.onclick = function() {
     clearContent();
     document.querySelector("body").appendChild(createMenu());
+    setActiveButton(menuButton);
 }
 
 contactButton.onclick = function() {
     clearContent();
     document.querySelector("body").appendChild(createContact());
+    setActiveButton(contactButton);
 }
 
 initialLoad();
+setActiveButton(homeButton);
