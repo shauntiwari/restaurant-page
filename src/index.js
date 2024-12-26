@@ -1,6 +1,8 @@
 import "./styles.css";
-import {initialLoad} from "./initialLoad.js";
-import {createHome} from "./home.js";
+import { initialLoad } from "./initialLoad.js";
+import { createHome } from "./home.js";
+import { createMenu } from "./menu.js";
+import { createContact } from "./contact.js";
 
 const homeButton = document.getElementById("home");
 const menuButton = document.getElementById("menu");
@@ -20,12 +22,12 @@ homeButton.onclick = function() {
 
 menuButton.onclick = function() {
     clearContent();
-    //append menu page content here
+    document.querySelector("body").appendChild(createMenu());
 }
 
 contactButton.onclick = function() {
     clearContent();
-    //append contact page content here
+    document.querySelector("body").appendChild(createContact());
 }
 
 initialLoad();

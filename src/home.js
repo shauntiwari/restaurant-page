@@ -27,21 +27,7 @@ function createHome() {
         p3.textContent = "Whether you're celebrating a special occasion or seeking an unforgettable dining experience, our carefully curated menu and extensive wine selection promise to delight your senses."
         section1.append(h2one, p2, p3);
         
-        const section2 = document.createElement("section");
-        section2.classList.add("highlights");
-        const h2two = document.createElement("h2");
-        h2two.textContent = "Our Specialties";
-        const ul = document.createElement("ul");
-        const li1 = document.createElement("li");
-        li1.textContent = "House-made Coq au Vin";
-        const li2 = document.createElement("li");
-        li2.textContent = "Classic Beef Bourguignon";
-        const li3 = document.createElement("li");
-        li3.textContent = "Fresh Seafood Daily";
-        ul.append(li1, li2, li3);
-        section2.append(h2two, ul);
-        
-        main.append(img, section1, section2);
+        main.append(img, section1);
         
         div.append(header, main);
         
